@@ -1,7 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const backend_url = "http://eyewings-backend.vercel.app/eyewings/api/v1_1/product"
+const backend_url = "https://eyewings-backend.vercel.app/eyewings/api/v1_1/product"
 
 // create product
 
@@ -51,13 +51,13 @@ const deleteReview = async(userData)=>{
 
 // dashboard all orders
 const allOrders = async()=>{
-    const response = await axios.get("http://eyewings-backend.vercel.app/eyewings/dashboard/api/v1/")
+    const response = await axios.get("https://eyewings-backend.vercel.app/eyewings/dashboard/api/v1/")
     return response.data
 }
 
 // update the order status from userOrder and dashboardOrder
 const updateOrderStatus = async(userData)=>{
-    const response = await axios.put("http://eyewings-backend.vercel.app/eyewings/dashboard/api/v1/" , userData)
+    const response = await axios.put("https://eyewings-backend.vercel.app/eyewings/dashboard/api/v1/" , userData)
     return response.data
 }
 
