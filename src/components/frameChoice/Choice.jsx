@@ -43,7 +43,7 @@ const Card = ({image , title, type})=>{
         <div className="card">
             <img src={image} alt="" />
             <h3>{title}</h3>
-            <Link to="/product/listing/all" >Explore</Link>
+            <Link to={'product/all/listing'} >Explore</Link>
         </div>
     )
 }
