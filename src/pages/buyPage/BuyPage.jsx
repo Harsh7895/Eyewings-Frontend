@@ -94,8 +94,8 @@ const BuyPage = () => {
         const userData = {
             amount: product?.price * productquantity,
         }
-        const { data } = await axios.post("http://eyewings-backend.vercel.app/eyewings/product/api/payment/checkout", userData)
-        const { data: { key } } = await axios.get("http://eyewings-backend.vercel.app/eyewings/product/api/payment/getkey")
+        const { data } = await axios.post("https://eyewings-backend.vercel.app/eyewings/product/api/payment/checkout", userData)
+        const { data: { key } } = await axios.get("https://eyewings-backend.vercel.app/eyewings/product/api/payment/getkey")
         console.log(data, key)
         var options = {
             key: key, // Enter the Key ID generated from the Dashboard
@@ -105,7 +105,7 @@ const BuyPage = () => {
             description: "Test Transaction",
             image: user?.user?.photo,
             order_id: data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-            callback_url: "http://localhost:5000/eyewings/product/api/payment/paymentVerification?userId=" + user.user._id + "&productId=" + product._id + "&amount=" + data.amount,
+            callback_url: "https://localhost:5000/eyewings/product/api/payment/paymentVerification?userId=" + user.user._id + "&productId=" + product._id + "&amount=" + data.amount,
             prefill: { //We recommend using the prefill parameter to auto-fill customer's contact information, especially their phone number
                 "name": `${name}`, //your customer's name
                 "email": `${user.email?user.email:""}`,
