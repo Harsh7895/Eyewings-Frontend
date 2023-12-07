@@ -212,6 +212,10 @@
 
 
 @media screen and (max-width:780px) {
+    .home{
+    width:100vw;
+        overflow-x:hidden;
+    }
     .row {
         display: none;
     }
