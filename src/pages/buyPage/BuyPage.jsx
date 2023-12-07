@@ -94,8 +94,8 @@ const BuyPage = () => {
         const userData = {
             amount: product?.price * productquantity,
         }
-        const { data } = await axios.post("http://localhost:5000/eyewings/product/api/payment/checkout", userData)
-        const { data: { key } } = await axios.get("http://localhost:5000/eyewings/product/api/payment/getkey")
+        const { data } = await axios.post("http://eyewings-backend.vercel.app/eyewings/product/api/payment/checkout", userData)
+        const { data: { key } } = await axios.get("http://eyewings-backend.vercel.app/eyewings/product/api/payment/getkey")
         console.log(data, key)
         var options = {
             key: key, // Enter the Key ID generated from the Dashboard
