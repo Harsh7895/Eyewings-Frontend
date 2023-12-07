@@ -1,6 +1,6 @@
 import React from 'react'
 import "./choice.scss"
-import { Link , useNavigate } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 
 const cardArr = [
     {
@@ -43,7 +43,7 @@ const Card = ({image , title, type})=>{
         <div className="card">
             <img src={image} alt="" />
             <h3>{title}</h3>
-            <Link onClick={()=>navigate("/product/listing/all")}>Explore</Link>
+            <Link to="/product/listing/all" >Explore</Link>
         </div>
     )
 }
