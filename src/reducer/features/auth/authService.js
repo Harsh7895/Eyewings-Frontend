@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const backend_url = "http://eyewings-backend.vercel.app/eyewings/Auth/api/v1/user/"
+const backend_url = "https://eyewings-backend.vercel.app/eyewings/Auth/api/v1/user/"
 
 // register user
 const register = async (userData) => {
@@ -69,7 +69,7 @@ const updateOrderAddress = async(userData)=>{
 
 
 const productCheckout = async(userData)=>{
-    const response = await axios.post( "http://eyewings-backend.vercel.app/eyewings/product/api/payment/checkout" , userData)
+    const response = await axios.post( "https://eyewings-backend.vercel.app/eyewings/product/api/payment/checkout" , userData)
     return response.data
 }
 
